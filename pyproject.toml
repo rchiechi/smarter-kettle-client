@@ -10,7 +10,6 @@ dependencies = [
     "pylint~=3.1",
     "aiohttp~=3.9",
     "setuptools>=69.5.1",
-    "pyrebase-air>=4.9.1",
 ]
 dynamic = ['version']
 requires-python = ">=3.12.4"
@@ -22,6 +21,14 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.12",
 ]
+
+[tool.pdm.dependencies]
+pyrebase-air = {git = "https://github.com/rchiechi/pyrebase-air.git", ref = "urllib3-v2-fix"}
+astroid = "~=3.1"
+pylint = "~=3.1"
+aiohttp = "~=3.9"
+setuptools = ">=69.5.1"
+
 [tool.pdm]
 distribution = false
 
